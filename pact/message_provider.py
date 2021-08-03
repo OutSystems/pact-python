@@ -111,10 +111,8 @@ class MessageProvider(object):
 
     def verify(self):
         """Verify pact files with executable verifier."""
-        #pact_files = f'{self.pact_dir}/{self._pact_file()}'
         verifier = Verifier(provider=self.provider,
                             provider_base_url=self._proxy_url())
-        #return_code, _ = verifier.verify_pacts(pact_files, verbose=False)
         return_code, _ = verifier.verify_with_broker(broker_username = self.broker_username,
                                                     broker_password = self.broker_password,
                                                     broker_url = self.broker_url,

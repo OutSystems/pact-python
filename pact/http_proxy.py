@@ -25,7 +25,6 @@ def shutdown_server():
 def _match_states(payload):
     """Match states in payload against stored message handlers."""
     log.info(f'Find handler from payload: {payload}')
-    #handlers = localstack.pop()
     bin_data= client.get("expected")
     json_data = bin_data.decode('utf-8').replace("'", '"')
     json_data = json_data.replace('"{"','{\"')

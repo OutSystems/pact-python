@@ -161,7 +161,7 @@ class Term(Matcher):
         self.matcher = matcher
         self._generate = generate
 
-    def get_gemerate(self):
+    def get_generate(self):
         return self._generate
 
     def __len__(self):
